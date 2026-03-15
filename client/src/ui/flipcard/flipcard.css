@@ -1,0 +1,64 @@
+.flip-card {
+  perspective: 1200px;
+  width: 100%;
+  height: 220px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform var(--transition-standard);
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-soft);
+  background: var(--color-surface-primary);
+  box-shadow: var(--shadow-soft);
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flip-card-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-strong);
+}
+
+.flip-card-summary {
+  margin-top: var(--space-sm);
+  color: var(--color-text-muted);
+}
+
+.flip-card-description {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-md);
+}
+
+.flip-card-price {
+  margin-top: var(--space-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+}
