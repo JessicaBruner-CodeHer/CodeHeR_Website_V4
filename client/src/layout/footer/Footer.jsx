@@ -1,9 +1,7 @@
-import { useState } from "react";
 import navLinks from "@/assets/constants/navLinks";
 import siteConfig from "@/assets/constants/siteConfig";
 import Button from "@/ui/button/Button";
-import "./navbar.css";
-
+import "./footer.css";
 
 
 const Footer = ({ onQuoteClick }) => {
