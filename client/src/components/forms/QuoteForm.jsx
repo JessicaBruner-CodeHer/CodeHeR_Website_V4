@@ -3,14 +3,23 @@ import Button from "../../../ui/button/Button";
 import siteConfig from "../../../assets/constants/siteConfig";
 import "./quoteform.css";
 
+const initialFormState = {
+  name: "",
+  email: "",
+  organization: "",
+  projectType: "",
+  message: ""
+};
+
+const initialStatusState = {
+  type: "",
+  message: ""
+};
+
 const QuoteForm = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    organization: "",
-    projectType: "",
-    message: ""
-  });
+  const [formData, setFormData] = useState(initialFormState);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState(initialStatusState);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -19,10 +28,21 @@ const QuoteForm = () => {
       ...previousState,
       [name]: value
     }));
+
+    if (status.type) {
+      setStatus(initialStatusState);
+    }
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    if (isSubmitting) {
+      return;
+    }
+
+    setIsSubmitting(true);
+    setStatus(initialStatusState);
 
     try {
       const response = await fetch(
@@ -42,22 +62,24 @@ const QuoteForm = () => {
         throw new Error(result.message || "Submission failed");
       }
 
-      console.log("Quote submitted:", result);
-
-      setFormData({
-        name: "",
-        email: "",
-        organization: "",
-        projectType: "",
-        message: ""
+      setFormData(initialFormState);
+      setStatus({
+        type: "success",
+        message: "Your quote request was submitted successfully."
       });
     } catch (error) {
-      console.error("Quote submit error:", error);
+      setStatus({
+        type: "error",
+        message:
+          error.message || "Something went wrong. Please try again."
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
-    <form className="quote-form" onSubmit={handleSubmit}>
+    <form className="quote-form" onSubmit={handleSubmit} noValidate>
       <h2 className="quote-form-title">Request a Quote</h2>
 
       <div className="quote-form-grid">
@@ -70,6 +92,8 @@ const QuoteForm = () => {
             required
             value={formData.name}
             onChange={handleChange}
+            disabled={isSubmitting}
+            autoComplete="name"
           />
         </div>
 
@@ -82,6 +106,8 @@ const QuoteForm = () => {
             required
             value={formData.email}
             onChange={handleChange}
+            disabled={isSubmitting}
+            autoComplete="email"
           />
         </div>
 
@@ -93,6 +119,8 @@ const QuoteForm = () => {
             name="organization"
             value={formData.organization}
             onChange={handleChange}
+            disabled={isSubmitting}
+            autoComplete="organization"
           />
         </div>
 
@@ -104,6 +132,7 @@ const QuoteForm = () => {
             required
             value={formData.projectType}
             onChange={handleChange}
+            disabled={isSubmitting}
           >
             <option value="">Select a project</option>
             <option value="new-site">New Website</option>
@@ -124,11 +153,27 @@ const QuoteForm = () => {
           required
           value={formData.message}
           onChange={handleChange}
+          disabled={isSubmitting}
         />
       </div>
 
+      {status.message ? (
+        <div
+          className={`form-status form-status--${status.type}`}
+          role="status"
+          aria-live="polite"
+        >
+          {status.message}
+        </div>
+      ) : null}
+
       <div className="quote-form-actions">
-        <Button type="submit" variant="primary" label="Submit Request" />
+        <Button
+          type="submit"
+          variant="primary"
+          label={isSubmitting ? "Submitting..." : "Submit Request"}
+          disabled={isSubmitting}
+        />
       </div>
     </form>
   );
