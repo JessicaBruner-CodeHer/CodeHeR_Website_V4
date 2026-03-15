@@ -1,0 +1,63 @@
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.quote-form-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-strong);
+}
+
+.quote-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-field label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-soft);
+  font-size: var(--font-size-md);
+  outline: none;
+  transition: border-color var(--transition-standard);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.form-message {
+  grid-column: span 2;
+}
+
+.quote-form-actions {
+  margin-top: var(--space-md);
+}
+
+@media (max-width: 768px) {
+  .quote-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-message {
+    grid-column: span 1;
+  }
+}
