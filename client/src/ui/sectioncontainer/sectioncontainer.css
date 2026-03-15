@@ -1,0 +1,20 @@
+.section-container {
+  position: relative;
+  width: 100%;
+}
+
+.section-container--flush-top {
+  padding-top: 0;
+}
+
+.section-container--flush-bottom {
+  padding-bottom: 0;
+}
+
+.section-container--soft {
+  background: var(--color-surface-alt);
+}
+
+.section-container--gradient {
+  background: var(--gradient-surface);
+}
