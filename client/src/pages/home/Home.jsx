@@ -7,33 +7,35 @@ import Hero from "@/sections/hero/Hero";
 import TrustStrip from "@/sections/truststrip/TrustStrip";
 import Services from "@/sections/services/Services";
 import About from "@/sections/about/About";
+import ProjectCta from "@/sections/projectcta/ProjectCta";
 
 import Modal from "@/ui/modal/Modal";
 import QuoteForm from "@/components/forms/quoteform/QuoteForm";
 
 import "./home.css";
 
-function Home() {
+const Home = () => {
   const { isOpen, openModal, closeModal } = useModal();
 
   return (
     <>
-      <Navbar openModal={openModal} />
+      <Navbar onQuoteClick={openModal} />
 
-      <Hero openModal={openModal} />
-      <TrustStrip />
-      <Services openModal={openModal} />
-      <About />
+      <main className="home-main">
+        <Hero onQuoteClick={openModal} />
+        <TrustStrip />
+        <Services />
+        <About />
+        <ProjectCta onQuoteClick={openModal} />
+      </main>
 
-          <Modal isOpen={isOpen} onClose={closeModal}>
-        <QuoteForm closeModal={closeModal} />
+      <Modal isOpen={isOpen} onClose={closeModal}>
+        <QuoteForm />
       </Modal>
 
-      <Footer openModal={openModal} />
-
-  
+      <Footer />
     </>
   );
-}
+};
 
 export default Home;
