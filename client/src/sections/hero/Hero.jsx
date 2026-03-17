@@ -1,42 +1,37 @@
 import SectionContainer from "@/ui/sectioncontainer/SectionContainer";
 import Button from "@/ui/button/Button";
-import siteConfig from "@/assets/constants/siteConfig";
+import { heroContent } from "@/assets/constants/homeContent";
 import "./hero.css";
 
-
 const Hero = ({ onQuoteClick }) => {
-  const hero = siteConfig.hero;
-
   return (
     <SectionContainer id="hero" className="hero-section">
       <div className="hero-content">
-
         <div className="hero-eyebrow">
-          {hero.eyebrow}
+          {heroContent.eyebrow}
         </div>
 
         <h1 className="hero-heading">
-          {hero.heading}
+          {heroContent.heading}
         </h1>
 
         <p className="hero-description">
-          {hero.description}
+          {heroContent.description}
         </p>
 
         <div className="hero-actions">
           <Button
             variant="primary"
-            label={hero.primaryCtaLabel}
+            label={heroContent.primaryCta.label}
             onClick={onQuoteClick}
           />
 
           <Button
             variant="secondary"
-            label={hero.secondaryCtaLabel}
-            href={hero.secondaryCtaHref}
+            label={heroContent.secondaryCta.label}
+            href={heroContent.secondaryCta.href}
           />
         </div>
-
       </div>
     </SectionContainer>
   );
