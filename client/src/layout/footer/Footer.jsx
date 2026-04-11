@@ -52,7 +52,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="site-container footer-bottom-inner">
           <span>
-            © {year} {siteConfig.brand.name}. All rights reserved.
+            © 2024 {siteConfig.brand.name}. All rights reserved.
           </span>
         </div>
       </div>
