@@ -1,6 +1,8 @@
 .section-container {
   position: relative;
   width: 100%;
+  padding-top: var(--space-4xl);
+  padding-bottom: var(--space-4xl);
 }
 
 .section-container--flush-top {
@@ -17,10 +19,4 @@
 
 .section-container--gradient {
   background: var(--gradient-surface);
-}
-.section-container {
-  position: relative;
-  width: 100%;
-  padding-top: 80px;
-  padding-bottom: 80px;
 }
