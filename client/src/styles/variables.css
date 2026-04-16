@@ -1,40 +1,42 @@
 :root {
   /* Brand Colors */
-  --color-primary: #2563eb;
-  --color-primary-dark: #1d4ed8;
-  --color-primary-soft: rgba(37, 99, 235, 0.18);
+  --color-primary: #c9973a;
+  --color-primary-dark: #b85c38;
+  --color-primary-soft: rgba(201, 151, 58, 0.16);
 
-  --color-secondary: #7c3aed;
-  --color-secondary-dark: #6d28d9;
-  --color-secondary-soft: rgba(124, 58, 237, 0.18);
+  --color-secondary: #b85c38;
+  --color-secondary-dark: #9f4d2e;
+  --color-secondary-soft: rgba(184, 92, 56, 0.14);
 
-  --gradient-primary: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-  --gradient-surface: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-  --gradient-page: linear-gradient(180deg, #ffffff 0%, #f8fafc 45%, #eef2ff 100%);
+  --gradient-primary: linear-gradient(135deg, #c9973a 0%, #b85c38 100%);
+  --gradient-surface: linear-gradient(180deg, #ffffff 0%, #faf7f2 100%);
+  --gradient-page: linear-gradient(180deg, #faf7f2 0%, #f7f1e8 100%);
 
   /* Surface Colors */
   --color-surface-primary: #ffffff;
-  --color-surface-alt: #f8fafc;
-  --color-surface-muted: #eef2ff;
-  --color-surface-glass: rgba(255, 255, 255, 0.72);
+  --color-surface-alt: #faf7f2;
+  --color-surface-muted: #ede5d8;
+  --color-surface-glass: rgba(255, 255, 255, 0.82);
 
   /* Text Colors */
-  --color-text-main: #111827;
-  --color-text-strong: #0f172a;
-  --color-text-muted: #6b7280;
-  --color-text-soft: #94a3b8;
+  --color-text-main: #1c1410;
+  --color-text-strong: #1c1410;
+  --color-text-muted: #6b5a48;
+  --color-text-soft: #9c8b78;
 
   /* Border Colors */
-  --color-border-soft: rgba(148, 163, 184, 0.22);
-  --color-border-medium: rgba(148, 163, 184, 0.4);
-  --color-border-strong: rgba(71, 85, 105, 0.24);
+  --color-border-soft: rgba(156, 139, 120, 0.22);
+  --color-border-medium: rgba(156, 139, 120, 0.38);
+  --color-border-strong: rgba(107, 90, 72, 0.28);
 
   /* Overlay / Focus */
-  --color-overlay: rgba(15, 23, 42, 0.58);
-  --color-focus-ring: rgba(37, 99, 235, 0.32);
+  --color-overlay: rgba(28, 20, 16, 0.58);
+  --color-focus-ring: rgba(201, 151, 58, 0.32);
 
   /* Typography */
-  --font-family-base: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-family-base: "DM Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-family-heading: "Playfair Display", Georgia, serif;
+  --font-family-brand: "Courier New", monospace;
 
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
@@ -43,17 +45,17 @@
   --font-size-xl: 1.25rem;
 
   --font-size-heading-sm: 1.75rem;
-  --font-size-heading-md: 2.25rem;
-  --font-size-heading-lg: 3.25rem;
+  --font-size-heading-md: 2.375rem;
+  --font-size-heading-lg: 3.5rem;
 
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  --line-height-tight: 1.15;
+  --line-height-tight: 1.08;
   --line-height-heading: 1.2;
-  --line-height-body: 1.6;
+  --line-height-body: 1.65;
 
   /* Spacing */
   --space-2xs: 0.25rem;
@@ -69,22 +71,22 @@
   /* Radius */
   --radius-sm: 0.5rem;
   --radius-md: 0.875rem;
-  --radius-lg: 1.25rem;
-  --radius-xl: 1.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
   --radius-pill: 999px;
 
   /* Shadows */
-  --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.08);
-  --shadow-medium: 0 20px 48px rgba(15, 23, 42, 0.12);
-  --shadow-button: 0 12px 30px rgba(63, 81, 181, 0.22);
-  --shadow-button-hover: 0 18px 38px rgba(63, 81, 181, 0.28);
-  --shadow-modal: 0 30px 80px rgba(15, 23, 42, 0.24);
-  --shadow-glass: 0 18px 40px rgba(15, 23, 42, 0.08);
+  --shadow-soft: 0 10px 30px rgba(28, 20, 16, 0.06);
+  --shadow-medium: 0 16px 40px rgba(28, 20, 16, 0.10);
+  --shadow-button: 0 10px 24px rgba(201, 151, 58, 0.22);
+  --shadow-button-hover: 0 14px 30px rgba(184, 92, 56, 0.24);
+  --shadow-modal: 0 30px 80px rgba(28, 20, 16, 0.24);
+  --shadow-glass: 0 18px 40px rgba(28, 20, 16, 0.08);
 
   /* Layout */
-  --site-max-width: 1200px;
-  --site-max-width-wide: 1320px;
-  --navbar-height: 84px;
+  --site-max-width: 1100px;
+  --site-max-width-wide: 1240px;
+  --navbar-height: 68px;
 
   /* Transitions */
   --transition-fast: 0.18s ease;

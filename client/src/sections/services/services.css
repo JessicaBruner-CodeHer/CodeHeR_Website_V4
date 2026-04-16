@@ -1,11 +1,118 @@
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-xl);
+.services-section {
+  padding: var(--space-4xl) 0;
 }
 
-@media (max-width: 900px) {
+/* ===== HEADER ===== */
+
+.services-header {
+  max-width: 760px;
+  margin-bottom: var(--space-3xl);
+}
+
+.services-eyebrow {
+  display: inline-block;
+  margin-bottom: var(--space-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #c9973a;
+}
+
+.services-heading {
+  font-size: var(--font-size-heading-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-strong);
+}
+
+.services-description {
+  margin-top: var(--space-md);
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+}
+
+/* ===== GRID ===== */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+}
+
+/* ===== CARD ===== */
+
+.service-card {
+  position: relative;
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f8fafc 100%
+  );
+  padding: var(--space-3xl);
+  transition: all var(--transition-standard);
+  overflow: hidden;
+}
+
+/* subtle top accent line */
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: #c9973a;
+  opacity: 0.8;
+}
+
+/* hover = more presence */
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* inner spacing control */
+.service-card-inner {
+  max-width: 520px;
+}
+
+/* title stronger */
+.service-title {
+  font-size: 1.6rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-strong);
+  letter-spacing: -0.02em;
+}
+
+/* subtitle becomes label */
+.service-subtitle {
+  display: inline-block;
+  margin-top: var(--space-sm);
+  font-size: 0.75rem;
+  color: #c9973a;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* description cleaner */
+.service-description {
+  margin-top: var(--space-lg);
+  font-size: var(--font-size-md);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-body);
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
   .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: var(--space-2xl);
   }
 }

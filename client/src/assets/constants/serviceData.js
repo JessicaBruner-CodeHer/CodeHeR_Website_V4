@@ -1,35 +1,30 @@
 const servicesData = [
   {
-    id: "full-website-build",
-    title: "Full Website Build",
-    summary: "Custom website development built from the ground up.",
+    id: "workforce-solutions",
+    title: "Build Stronger Teams. Solve Workforce Gaps.",
+    summary: "Consulting services that help you hire smarter and retain talent.",
     description:
-      "End-to-end website development for businesses and organizations that need a professional, scalable, and conversion-ready online presence.",
-    price: "Starting at $2,500"
+      "Structured consulting designed to improve hiring, reduce turnover, and build sustainable workforce strategies.",
+    features: [
+      "Workforce Assessment",
+      "Workforce Strategy",
+      "Implementation Support",
+      "Ongoing Advisory"
+    ],
+    cta: "Explore Workforce Solutions"
   },
   {
-    id: "website-rebuild",
-    title: "Website Rebuild",
-    summary: "Strategic redesign and rebuild of an existing website.",
+    id: "digital-solutions",
+    title: "Professional Presence. Powerful Possibilities.",
+    summary: "Web solutions that support and grow your business.",
     description:
-      "Website rebuild services for outdated, broken, or underperforming sites that need stronger structure, cleaner design, and better usability.",
-    price: "Starting at $1,500"
-  },
-  {
-    id: "managed-hosting",
-    title: "Managed Hosting",
-    summary: "Ongoing hosting support, oversight, and maintenance.",
-    description:
-      "Managed hosting support designed to help keep your website stable, monitored, updated, and easier to maintain over time.",
-    price: "Starting at $60 / month"
-  },
-  {
-    id: "technical-support",
-    title: "Technical Support",
-    summary: "Hands-on troubleshooting and technical website help.",
-    description:
-      "Technical support for website issues, updates, fixes, and general web-related troubleshooting when your business needs direct support.",
-    price: "Flat rate of $600.00 plus $26.00 / hour"
+      "Web development and digital  support designed to strengthen your presence and support business operations.",
+    features: [
+      "Website Development",
+      "Website Rebuilds",
+      "Hosting & Support"
+    ],
+    cta: "Explore Digital Solutions"
   }
 ];
 

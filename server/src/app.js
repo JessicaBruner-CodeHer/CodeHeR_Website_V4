@@ -12,6 +12,8 @@ const __dirname = path.dirname(__filename);
 const allowedOrigins = [
   "http://localhost:5173",
   "http://127.0.0.1:5173",
+  "http://codeherllc.com",
+  "http://www.codeherllc.com",
   "https://codeherllc.com",
   "https://www.codeherllc.com"
 ];
@@ -45,7 +47,7 @@ app.use("/api/quotes", quoteRoutes);
 if (process.env.NODE_ENV === "production") {
   const clientDist = path.join(__dirname, "../../client/dist");
   app.use(express.static(clientDist));
-  app.get("*", (req, res) => {
+  app.get("/{*path}", (req, res) => {
     res.sendFile(path.join(clientDist, "index.html"));
   });
 }

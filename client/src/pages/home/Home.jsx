@@ -4,7 +4,6 @@ import Navbar from "@/layout/navbar/Navbar";
 import Footer from "@/layout/footer/Footer";
 
 import Hero from "@/sections/hero/Hero";
-import TrustStrip from "@/sections/truststrip/TrustStrip";
 import Services from "@/sections/services/Services";
 import About from "@/sections/about/About";
 import ProjectCta from "@/sections/projectcta/ProjectCta";
@@ -22,10 +21,9 @@ const Home = () => {
       <Navbar onQuoteClick={openModal} />
 
       <main className="home-main">
+       
         <Hero onQuoteClick={openModal} />
-        <TrustStrip />
         <Services />
-        
         <About />
         <ProjectCta onQuoteClick={openModal} />
       </main>

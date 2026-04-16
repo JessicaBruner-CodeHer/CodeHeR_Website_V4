@@ -2,7 +2,7 @@ const siteConfig = {
   brand: {
     name: "CodeHe{R} LLC",
     domain: "codeherllc.com",
-    tagline: "Smart Websites. Powerful Infrastructure. Built for Growth."
+    tagline: "Business Solutions Firm"
   },
 
   business: {
@@ -12,7 +12,7 @@ const siteConfig = {
   },
 
   navigation: {
-    ctaLabel: "Request a Quote",
+    ctaLabel: "Start a Conversation",
     ctaTarget: "quote-modal"
   },
 
@@ -27,35 +27,30 @@ const siteConfig = {
   },
 
   truststrip: {
-    heading: "Built for reliability, clarity, and long-term support.",
-    description:
-      "CodeHe{R} LLC helps businesses and organizations build and maintain websites with clean development, transparent communication, and service that supports growth.",
-    items: ["Reliable", "Transparent", "Full-Service", "Managed Hosting"]
+    heading: "",
+    description: "",
+    items: []
   },
 
   services: {
-    eyebrow: "Services",
-    heading: "Built to Support the Full Life of Your Website",
+    eyebrow: "Solutions",
+    heading: "Two focused paths for business growth.",
     description:
-      "From full builds to rebuilds, managed hosting, and technical support, CodeHe{R} LLC offers services designed to help businesses launch, improve, and maintain a strong web presence."
+      "CodeHe{R} supports organizations through two core service areas. Workforce Solutions helps businesses strengthen hiring, retention, and long-term workforce strategy. Digital Solutions helps businesses build a professional online presence that supports credibility, visibility, and growth."
   },
 
   about: {
-    eyebrow: "About",
-    heading: "A Company Built to Deliver Clean, Reliable Web Solutions",
-    paragraphs: [
-      "CodeHe{R} LLC provides website development and support services for businesses and organizations that need a strong digital foundation without unnecessary complexity.",
-      "The company focuses on clean builds, practical solutions, and long-term usability so clients have a website that works for their business today and can scale with them tomorrow."
-    ]
+    eyebrow: "Why CodeHe{R}?",
+    heading: "Solutions That Work. Execution That Lasts."
   },
 
   footer: {
     description:
-      "CodeHe{R} LLC provides website development, website rebuilds, managed hosting, and technical support for businesses and organizations across the United States.",
+      "CodeHe{R} helps businesses strengthen their workforce and digital presence through consulting and professional web solutions.",
     links: [
       {
         id: "footer-services",
-        label: "Services",
+        label: "Solutions",
         href: "#services"
       },
       {

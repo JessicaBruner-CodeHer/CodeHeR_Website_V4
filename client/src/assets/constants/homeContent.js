@@ -2,7 +2,7 @@ export const navbarContent = {
   brand: "CodeHe{R}",
   links: [
     {
-      label: "Services",
+      label: "Solutions",
       href: "#services",
     },
     {
@@ -10,75 +10,56 @@ export const navbarContent = {
       href: "#about",
     },
     {
-      label: "Start Your Project",
+      label: "Start a Conversation",
       href: "#project-cta",
     },
   ],
   cta: {
-    label: "Get a Quote",
+    label: "Start a Conversation",
   },
 };
 
 export const heroContent = {
-  eyebrow: "Smart Websites. Powerful Infrastructure. Built for Growth.",
+  eyebrow: "Business Solutions Firm",
   heading:
-    "Professional websites designed to elevate your brand and support long-term growth.",
+    "Business solutions built for real-world execution.",
   description:
-    "CodeHe{R} builds modern, polished websites that help businesses present themselves with clarity, credibility, and confidence online.",
+    "CodeHe{R} helps organizations strengthen their workforce and build a professional digital presence through consulting and web solutions designed for real business needs.",
   primaryCta: {
-    label: "Start Your Project",
-    href: "#project-cta",
+    label: "Start a Conversation",
   },
   secondaryCta: {
-    label: "View Services",
+    label: "Explore Solutions",
     href: "#services",
   },
   supportingPoints: [
-    "Custom website design and development",
-    "Professional structure and user experience",
-    "Built to scale as your business grows",
+    "Workforce consulting and implementation support",
+    "Professional websites and digital presence solutions",
+    "Services built to support growth, credibility, and long-term value",
   ],
 };
 
 export const trustStripContent = {
-  items: [
-    "Custom Development",
-    "Responsive Design",
-    "Professional Branding",
-    "Scalable Architecture",
-    "Modern Web Standards",
-  ],
+  items: [],
 };
 
 export const servicesContent = {
-  eyebrow: "Services",
-  heading: "Web development built around your business goals",
+  eyebrow: "Solutions",
+  heading: "Two focused paths for business growth.",
   description:
-    "Every business deserves a digital presence that reflects the quality of the work behind it. CodeHe{R} provides website solutions that strengthen credibility, improve user experience, and support long-term business growth.",
+    "CodeHe{R} supports organizations through two core service areas. Workforce Solutions helps businesses strengthen hiring, retention, and long-term workforce strategy. Digital Solutions helps businesses build a professional online presence that supports credibility, visibility, and growth.",
   cards: [
     {
-      title: "Full Website Development",
-      price: "Starting at $1,500",
+      title: "Workforce Solutions",
+      price: "Consulting Services",
       description:
-        "Custom-built websites developed with clean architecture, modern design, and responsive performance. Ideal for businesses launching a new digital presence or upgrading their current website.",
+        "Consulting services designed to help organizations strengthen hiring, improve retention, and build workforce strategies that support long-term business goals.",
     },
     {
-      title: "Website Design",
-      price: "$85 per hour",
+      title: "Digital Solutions",
+      price: "Web Presence Services",
       description:
-        "Strategic layouts and visual design that present your brand clearly and professionally while creating an engaging experience for visitors.",
-    },
-    {
-      title: "Website Updates and Optimization",
-      price: "$90 per hour",
-      description:
-        "Enhancements to existing websites including layout improvements, structural updates, content adjustments, and performance optimization.",
-    },
-    {
-      title: "Full Service Website Hosting",
-      price: "$175 migration + $29 per month",
-      description:
-        "Reliable website hosting with full migration support, ongoing maintenance, and performance monitoring to keep your website secure and running smoothly.",
+        "Professional web solutions that help businesses present themselves clearly, build credibility, and create a digital presence that reflects the quality of their work.",
     },
   ],
 };
@@ -86,49 +67,49 @@ export const servicesContent = {
 export const aboutContent = {
   eyebrow: "About",
   heading:
-    "CodeHe{R} helps businesses present themselves online with clarity and confidence.",
+    "CodeHe{R} helps businesses strengthen their workforce and digital presence.",
   description:
-    "A strong website is more than a digital placeholder. It is often the first impression someone has of your business. CodeHe{R} focuses on building websites that communicate professionalism, establish credibility, and make it easier for people to understand the value of what you do.",
+    "CodeHe{R} is a business solutions firm focused on helping organizations solve practical business challenges through workforce consulting and digital solutions.",
   extendedDescription:
-    "From layout and messaging to performance and responsiveness, every element of a CodeHe{R} website is designed to support how businesses grow and operate today. The goal is simple: create a digital presence that reflects the quality of your work.",
+    "Whether the need is stronger workforce strategy or a more professional digital presence, CodeHe{R} provides services designed to support execution, sustainability, and long-term value.",
   stats: [
     {
-      value: "Custom",
-      label: "Designed around your business",
+      value: "Structured",
+      label: "Built around clear solutions",
+    },
+    {
+      value: "Practical",
+      label: "Designed for real business needs",
     },
     {
       value: "Professional",
-      label: "Clean and modern presentation",
-    },
-    {
-      value: "Scalable",
-      label: "Built for future growth",
+      label: "Focused on credibility and growth",
     },
   ],
 };
 
 export const projectCtaContent = {
-  eyebrow: "Start Your Project",
-  heading: "Ready to strengthen your online presence?",
+  eyebrow: "Start a Conversation",
+  heading: "Ready to build what comes next?",
   description:
-    "Whether you are launching something new or expanding what already exists, CodeHe{R} helps businesses build websites that reflect their professionalism and support continued growth.",
+    "Whether you need workforce consulting or digital solutions, CodeHe{R} helps businesses move forward with practical support and a clear path to execution.",
   primaryCta: {
-    label: "Get a Quote",
+    label: "Start a Conversation",
   },
   secondaryText:
-    "Share a few details about your project and we will start the conversation.",
+    "Share a few details about your business needs and we will start the conversation.",
 };
 
 export const footerContent = {
   brand: {
     name: "CodeHe{R}",
     tagline:
-      "Modern websites built with strategy, structure, and purpose.",
+      "Business solutions built with clarity, structure, and purpose.",
   },
   navigationHeading: "Navigation",
   navigationLinks: [
     {
-      label: "Services",
+      label: "Solutions",
       href: "#services",
     },
     {
@@ -136,19 +117,19 @@ export const footerContent = {
       href: "#about",
     },
     {
-      label: "Start Your Project",
+      label: "Start a Conversation",
       href: "#project-cta",
     },
   ],
-  contactHeading: "Services",
+  contactHeading: "What We Do",
   contactItems: [
-    "Custom website design",
-    "Modern web development",
-    "Website refresh and optimization",
-    "Full service website hosting",
+    "Workforce consulting",
+    "Hiring and retention support",
+    "Professional website development",
+    "Digital presence solutions",
   ],
   cta: {
-    label: "Get a Quote",
+    label: "Start a Conversation",
   },
   copyrightName: "CodeHe{R}",
 };

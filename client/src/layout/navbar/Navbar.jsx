@@ -4,8 +4,6 @@ import siteConfig from "@/assets/constants/siteConfig";
 import Button from "@/ui/button/Button";
 import "./navbar.css";
 
-
-
 const Navbar = ({ onQuoteClick }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -20,10 +18,16 @@ const Navbar = ({ onQuoteClick }) => {
   return (
     <header className="navbar">
       <div className="site-container navbar-inner">
+        
+        {/* Brand */}
         <div className="navbar-brand">
-          {siteConfig.brand.name}
+          <span className="brand-code">CODE</span>
+          <span className="brand-he">HE</span>
+          <span className="brand-r">{`{R}`}</span>
+          <sup className="brand-llc">LLC</sup>
         </div>
 
+        {/* Links */}
         <nav className={`navbar-links ${menuOpen ? "is-open" : ""}`}>
           {navLinks.map((link) => (
             <a
@@ -37,6 +41,7 @@ const Navbar = ({ onQuoteClick }) => {
           ))}
         </nav>
 
+        {/* Actions */}
         <div className="navbar-actions">
           <Button
             variant="quote"
@@ -54,6 +59,7 @@ const Navbar = ({ onQuoteClick }) => {
             <span className="navbar-toggle-bar"></span>
           </button>
         </div>
+
       </div>
     </header>
   );

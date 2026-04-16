@@ -3,12 +3,12 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-xs);
-  min-height: 48px;
-  padding: 0.875rem 1.5rem;
+  min-height: 44px;
+  padding: 0.8rem 1.35rem;
   border: 1px solid transparent;
   border-radius: var(--radius-pill);
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-semibold);
+  font-size: 0.92rem;
+  font-weight: var(--font-weight-medium);
   line-height: 1;
   text-align: center;
   white-space: nowrap;
@@ -22,7 +22,7 @@
 }
 
 .button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 .button:focus-visible {
@@ -39,34 +39,39 @@
 }
 
 .button--primary {
-  background: var(--gradient-primary);
-  color: var(--color-surface-primary);
+  background: var(--color-primary);
+  color: var(--color-text-strong);
   box-shadow: var(--shadow-button);
 }
 
 .button--primary:hover {
+  background: var(--color-secondary);
+  color: #ffffff;
   box-shadow: var(--shadow-button-hover);
 }
 
 .button--secondary {
-  background-color: var(--color-surface-primary);
-  color: var(--color-primary);
-  border-color: var(--color-primary-soft);
-  box-shadow: var(--shadow-soft);
+  background-color: transparent;
+  color: var(--color-text-strong);
+  border-color: var(--color-text-strong);
+  box-shadow: none;
 }
 
 .button--secondary:hover {
-  background-color: var(--color-surface-alt);
   border-color: var(--color-primary);
+  color: var(--color-primary);
+  background-color: transparent;
 }
 
 .button--quote {
-  background: var(--gradient-primary);
-  color: var(--color-surface-primary);
+  background: var(--color-primary);
+  color: var(--color-text-strong);
   box-shadow: var(--shadow-button);
 }
 
 .button--quote:hover {
+  background: var(--color-secondary);
+  color: #ffffff;
   box-shadow: var(--shadow-button-hover);
 }
 

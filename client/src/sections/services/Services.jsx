@@ -1,37 +1,41 @@
 import SectionContainer from "@/ui/sectioncontainer/SectionContainer";
-import SectionHeading from "@/ui/sectionheading/SectionHeading";
-
-import FlipCard from "@/ui/flipcard/FlipCard";
-
-import servicesData from "@/assets/constants/serviceData";
-import siteConfig from "@/assets/constants/siteConfig";
+import { servicesContent } from "@/assets/constants/homeContent";
 import "./services.css";
 
-
 const Services = () => {
-  const servicesSection = siteConfig.services;
-
   return (
-    <SectionContainer id="services">
+    <SectionContainer id="services" className="services-section">
+      <div className="services-header">
+        <span className="services-eyebrow">
+          {servicesContent.eyebrow}
+        </span>
 
-      <SectionHeading
-        eyebrow={servicesSection.eyebrow}
-        title={servicesSection.heading}
-        description={servicesSection.description}
-      />
+        <h2 className="services-heading">
+          {servicesContent.heading}
+        </h2>
 
-      <div className="services-grid">
-        {servicesData.map((service) => (
-          <FlipCard
-            key={service.id}
-            title={service.title}
-            summary={service.summary}
-            description={service.description}
-            price={service.price}
-          />
-        ))}
+        <p className="services-description">
+          {servicesContent.description}
+        </p>
       </div>
 
+      <div className="services-grid">
+        {servicesContent.cards.map((card, index) => (
+          <div key={index} className="service-card">
+            <div className="service-card-inner">
+              <h3 className="service-title">{card.title}</h3>
+
+              <span className="service-subtitle">
+                {card.price}
+              </span>
+
+              <p className="service-description">
+                {card.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
     </SectionContainer>
   );
 };

@@ -1,16 +1,16 @@
 const navLinks = [
   {
-    id: "home",
+    id: "nav-home",
     label: "Home",
     href: "#hero"
   },
   {
-    id: "services",
-    label: "Services",
+    id: "nav-services",
+    label: "Solutions",
     href: "#services"
   },
   {
-    id: "about",
+    id: "nav-about",
     label: "About",
     href: "#about"
   }

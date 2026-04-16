@@ -1,42 +1,32 @@
 import SectionContainer from "@/ui/sectioncontainer/SectionContainer";
-import SectionHeading from "@/ui/sectionheading/SectionHeading";
-import CapabilityCard from "@/ui/capabilitycard/CapabilityCard";
 import aboutCapabilities from "@/assets/constants/aboutCapabilities";
 import siteConfig from "@/assets/constants/siteConfig";
 import "./about.css";
-
 
 const About = () => {
   const about = siteConfig.about;
 
   return (
-    <SectionContainer id="about">
-      <SectionHeading
-        eyebrow={about.eyebrow}
-        title={about.heading}
-        align="left"
-      />
-
-      <div className="about-layout">
-        <div className="about-content">
-          {about.paragraphs.map((paragraph, index) => (
-            <p key={`about-paragraph-${index}`} className="about-paragraph">
-              {paragraph}
-            </p>
-          ))}
+    <section id="about" className="about-section">
+      <SectionContainer>
+        <div className="about-header">
+          <p className="about-eyebrow">{about.eyebrow}</p>
+          <h2 className="about-heading">{about.heading}</h2>
         </div>
 
-        <div className="about-capabilities">
+        <div className="about-capabilities-grid">
           {aboutCapabilities.map((capability) => (
-            <CapabilityCard
-              key={capability.id}
-              title={capability.title}
-              description={capability.description}
-            />
+            <div key={capability.id} className="about-capability-card">
+              <div className="about-capability-icon">{capability.icon}</div>
+              <h3 className="about-capability-title">{capability.title}</h3>
+              <p className="about-capability-description">
+                {capability.description}
+              </p>
+            </div>
           ))}
         </div>
-      </div>
-    </SectionContainer>
+      </SectionContainer>
+    </section>
   );
 };
 

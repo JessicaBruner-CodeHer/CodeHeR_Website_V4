@@ -1,27 +1,31 @@
 const aboutCapabilities = [
   {
-    id: "custom-development",
-    title: "Custom Website Development",
+    id: "practical-strategic",
+    icon: "🎯",
+    title: "Practical & Strategic",
     description:
-      "Strategic website builds designed around business goals, user experience, and long-term scalability."
+      "Solutions designed for real business challenges."
   },
   {
-    id: "website-rebuilds",
-    title: "Website Rebuilds",
+    id: "structured-reliable",
+    icon: "📋",
+    title: "Structured & Reliable",
     description:
-      "Rebuilding outdated or underperforming websites with stronger structure, cleaner design, and better usability."
+      "A clear process from start to finish."
   },
   {
-    id: "managed-hosting",
-    title: "Managed Hosting",
+    id: "built-for-results",
+    icon: "⚡",
+    title: "Built for Results",
     description:
-      "Ongoing hosting support and maintenance to help keep websites stable, monitored, and easier to manage."
+      "Focused on outcomes that drive growth."
   },
   {
-    id: "technical-support",
-    title: "Technical Support",
+    id: "partnership-approach",
+    icon: "🤝",
+    title: "Partnership Approach",
     description:
-      "Direct troubleshooting and technical support for updates, issues, fixes, and website-related needs."
+      "We work with you, not just for you."
   }
 ];
 
