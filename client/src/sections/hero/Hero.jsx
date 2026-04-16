@@ -1,6 +1,7 @@
 import SectionContainer from "@/ui/sectioncontainer/SectionContainer";
 import Button from "@/ui/button/Button";
 import { heroContent } from "@/assets/constants/homeContent";
+import heroLogo from "@/assets/images/CodeHeR_Logo_Transparent.svg";
 import "./hero.css";
 
 const Hero = ({ onQuoteClick }) => {
@@ -29,12 +30,12 @@ const Hero = ({ onQuoteClick }) => {
           </div>
         </div>
 
-        <div className="hero-emblem">
-          <div className="hero-emblem-ring">
-            <div className="hero-emblem-inner">
-              <span className="hero-emblem-mark">{`{R}`}</span>
-            </div>
-          </div>
+        <div className="hero-brand-visual">
+          <img
+            src={heroLogo}
+            alt="CodeHe{R} LLC"
+            className="hero-brand-image"
+          />
         </div>
       </div>
     </SectionContainer>

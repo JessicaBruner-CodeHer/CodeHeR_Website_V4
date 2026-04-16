@@ -22,6 +22,7 @@ const Button = ({
         href={href}
         target={target || undefined}
         rel={rel || (target === "_blank" ? "noreferrer noopener" : undefined)}
+        onClick={onClick}
         aria-label={typeof buttonLabel === "string" ? buttonLabel : undefined}
       >
         {buttonLabel}

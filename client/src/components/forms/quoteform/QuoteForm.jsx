@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Button from "@/ui/button/Button";
+import Logo from "@/ui/logo/Logo";
 import siteConfig from "@/assets/constants/siteConfig";
 import "./quoteform.css";
-
 
 const initialFormState = {
   name: "",
@@ -25,22 +25,18 @@ const QuoteForm = () => {
   const handleChange = (event) => {
     const { name, value } = event.target;
 
-    setFormData((previousState) => ({
-      ...previousState,
+    setFormData((prev) => ({
+      ...prev,
       [name]: value
     }));
 
-    if (status.type) {
-      setStatus(initialStatusState);
-    }
+    if (status.type) setStatus(initialStatusState);
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (isSubmitting) {
-      return;
-    }
+    if (isSubmitting) return;
 
     setIsSubmitting(true);
     setStatus(initialStatusState);
@@ -50,9 +46,7 @@ const QuoteForm = () => {
         `${siteConfig.api.baseUrl}${siteConfig.api.quoteEndpoint}`,
         {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData)
         }
       );
@@ -66,13 +60,12 @@ const QuoteForm = () => {
       setFormData(initialFormState);
       setStatus({
         type: "success",
-        message: "Your quote request was submitted successfully."
+        message: "Your request was submitted successfully."
       });
     } catch (error) {
       setStatus({
         type: "error",
-        message:
-          error.message || "Something went wrong. Please try again."
+        message: error.message || "Something went wrong."
       });
     } finally {
       setIsSubmitting(false);
@@ -80,103 +73,109 @@ const QuoteForm = () => {
   };
 
   return (
-    <form className="quote-form" onSubmit={handleSubmit} noValidate>
-      <h2 className="quote-form-title">Request a Quote</h2>
+    <div className="quote-wrapper">
+      {/* HEADER */}
+      <div className="quote-header">
+        <div className="quote-header-inner">
+          <Logo className="quote-logo" />
 
-      <div className="quote-form-grid">
-        <div className="form-field">
-          <label htmlFor="name">Name</label>
-          <input
-            id="name"
-            type="text"
-            name="name"
-            required
-            value={formData.name}
-            onChange={handleChange}
-            disabled={isSubmitting}
-            autoComplete="name"
-          />
-        </div>
+          <p className="quote-eyebrow">Start a Conversation</p>
 
-        <div className="form-field">
-          <label htmlFor="email">Email</label>
-          <input
-            id="email"
-            type="email"
-            name="email"
-            required
-            value={formData.email}
-            onChange={handleChange}
-            disabled={isSubmitting}
-            autoComplete="email"
-          />
-        </div>
+          <h2 className="quote-heading">
+            Let&apos;s Build What&apos;s Next.
+          </h2>
 
-        <div className="form-field">
-          <label htmlFor="organization">Organization</label>
-          <input
-            id="organization"
-            type="text"
-            name="organization"
-            value={formData.organization}
-            onChange={handleChange}
-            disabled={isSubmitting}
-            autoComplete="organization"
-          />
-        </div>
-
-        <div className="form-field">
-          <label htmlFor="projectType">Project Type</label>
-          <select
-            id="projectType"
-            name="projectType"
-            required
-            value={formData.projectType}
-            onChange={handleChange}
-            disabled={isSubmitting}
-          >
-            <option value="">Select a project</option>
-            <option value="new-site">New Website</option>
-            <option value="rebuild">Website Rebuild</option>
-            <option value="maintenance">Maintenance</option>
-            <option value="hosting">Hosting</option>
-            <option value="support">Technical Support</option>
-          </select>
+          <p className="quote-subtext">
+            Tell us about your goals and we&apos;ll reach out within one business day.
+          </p>
         </div>
       </div>
 
-      <div className="form-field form-message">
-        <label htmlFor="message">Project Details</label>
-        <textarea
-          id="message"
-          name="message"
-          rows="4"
-          required
-          value={formData.message}
-          onChange={handleChange}
-          disabled={isSubmitting}
-        />
-      </div>
+      {/* FORM */}
+      <form className="quote-form-body" onSubmit={handleSubmit} noValidate>
+        <div className="quote-grid">
+          <div className="form-field">
+            <label>Full Name *</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Jane Smith"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-      {status.message ? (
-        <div
-          className={`form-status form-status--${status.type}`}
-          role="status"
-          aria-live="polite"
-        >
-          {status.message}
+          <div className="form-field">
+            <label>Email Address *</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="jane@company.com"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-field full">
+            <label>Organization</label>
+            <input
+              type="text"
+              name="organization"
+              placeholder="Your company or organization name"
+              value={formData.organization}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className="form-field full">
+            <label>Project Type *</label>
+            <select
+              name="projectType"
+              value={formData.projectType}
+              onChange={handleChange}
+              required
+            >
+              <option value="">Select a solution area...</option>
+              <option value="workforce">Workforce Solutions</option>
+              <option value="digital">Digital Solutions</option>
+            </select>
+          </div>
+
+          <div className="form-field full">
+            <label>Message *</label>
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Tell us about your current challenges, goals, or what you'd like to accomplish..."
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
+          </div>
         </div>
-      ) : null}
 
-      <div className="quote-form-actions">
-        <Button
-          type="submit"
-          variant="primary"
-          label={isSubmitting ? "Submitting..." : "Submit Request"}
-          disabled={isSubmitting}
-        />
-      </div>
-    </form>
+        {status.message && (
+          <div className={`form-status form-status--${status.type}`}>
+            {status.message}
+          </div>
+        )}
+
+        <div className="quote-submit">
+          <Button
+            type="submit"
+            variant="secondary"
+            label={isSubmitting ? "Submitting..." : "Send My Request →"}
+            disabled={isSubmitting}
+          />
+        </div>
+
+        <p className="quote-footnote">
+          Required fields marked with *. We never share your information.
+        </p>
+      </form>
+    </div>
   );
 };
 

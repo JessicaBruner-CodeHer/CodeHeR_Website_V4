@@ -1,5 +1,6 @@
 import navLinks from "@/assets/constants/navLinks";
 import siteConfig from "@/assets/constants/siteConfig";
+import Logo from "@/ui/logo/Logo";
 import "./footer.css";
 
 const Footer = () => {
@@ -10,8 +11,8 @@ const Footer = () => {
       <div className="site-container footer-inner">
         <div className="footer-brand">
           <div className="footer-logo">
-            {siteConfig.brand.name}
-          </div>
+  <Logo />
+</div>
 
           <p className="footer-description">
             {siteConfig.brand.tagline}

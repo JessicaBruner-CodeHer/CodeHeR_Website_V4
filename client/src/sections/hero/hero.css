@@ -1,16 +1,16 @@
 .hero-section {
-  padding: 80px 0 56px;
+  padding: 96px 0 72px;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 360px;
-  gap: 60px;
+  grid-template-columns: minmax(0, 1fr) 520px;
+  gap: 72px;
   align-items: center;
 }
 
 .hero-content {
-  max-width: 620px;
+  max-width: 680px;
 }
 
 .hero-eyebrow {
@@ -24,84 +24,66 @@
 
 .hero-heading {
   margin: 0;
-  font-size: clamp(3rem, 5vw, 4rem);
-  line-height: 1.05;
+  max-width: 12ch;
+  font-family: var(--font-family-heading);
+  font-size: clamp(3.2rem, 5vw, 4.4rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
   color: var(--color-text-strong);
 }
 
 .hero-description {
   margin-top: 24px;
-  max-width: 520px;
-  font-size: 1rem;
-  line-height: 1.7;
+  max-width: 560px;
+  font-size: 1.05rem;
+  line-height: 1.75;
   color: var(--color-text-muted);
 }
 
 .hero-actions {
   display: flex;
   gap: 16px;
-  margin-top: 32px;
+  margin-top: 36px;
   flex-wrap: wrap;
 }
 
-.hero-emblem {
+.hero-actions .button {
+  min-width: 190px;
+}
+
+.hero-brand-visual {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: scale(1.05);
 }
 
-.hero-emblem-ring {
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  background: #ede5d8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.hero-emblem-ring::before {
-  content: "";
-  position: absolute;
-  inset: 14px;
-  border-radius: 50%;
-  border: 1px solid #e8d5b0;
-}
-
-.hero-emblem-inner {
-  width: 180px;
-  height: 180px;
-  background: #c9973a;
-  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-emblem-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 118px;
-  height: 118px;
-  background: #faf7f2;
-  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
-  color: #1c1410;
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: -0.04em;
+.hero-brand-image {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  object-fit: contain;
 }
 
 @media (max-width: 900px) {
+  .hero-section {
+    padding: 72px 0 56px;
+  }
+
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 40px;
   }
 
   .hero-content {
     max-width: 100%;
     text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero-heading {
+    max-width: none;
     margin: 0 auto;
   }
 
@@ -114,19 +96,7 @@
     justify-content: center;
   }
 
-  .hero-emblem-ring {
-    width: 260px;
-    height: 260px;
-  }
-
-  .hero-emblem-inner {
-    width: 145px;
-    height: 145px;
-  }
-
-  .hero-emblem-mark {
-    width: 96px;
-    height: 96px;
-    font-size: 2rem;
+  .hero-brand-image {
+    max-width: 280px;
   }
 }

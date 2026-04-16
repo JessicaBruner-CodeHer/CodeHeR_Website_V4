@@ -1,107 +1,62 @@
 :root {
-  /* Brand Colors */
+  /* ===== BRAND COLORS (CodeHe{R}) ===== */
   --color-primary: #c9973a;
   --color-primary-dark: #b85c38;
-  --color-primary-soft: rgba(201, 151, 58, 0.16);
+  --color-primary-soft: rgba(201, 151, 58, 0.18);
 
-  --color-secondary: #b85c38;
-  --color-secondary-dark: #9f4d2e;
-  --color-secondary-soft: rgba(184, 92, 56, 0.14);
+  --color-accent: #b85c38;
 
-  --gradient-primary: linear-gradient(135deg, #c9973a 0%, #b85c38 100%);
-  --gradient-surface: linear-gradient(180deg, #ffffff 0%, #faf7f2 100%);
-  --gradient-page: linear-gradient(180deg, #faf7f2 0%, #f7f1e8 100%);
-
-  /* Surface Colors */
+  /* ===== BACKGROUNDS ===== */
+  --color-background-main: #1c1410;
   --color-surface-primary: #ffffff;
-  --color-surface-alt: #faf7f2;
-  --color-surface-muted: #ede5d8;
-  --color-surface-glass: rgba(255, 255, 255, 0.82);
+  --color-surface-alt: #f8f5f0;
 
-  /* Text Colors */
+  /* ===== TEXT ===== */
   --color-text-main: #1c1410;
   --color-text-strong: #1c1410;
-  --color-text-muted: #6b5a48;
-  --color-text-soft: #9c8b78;
+  --color-text-muted: #6f6256;
+  --color-text-light: #f5ecd7;
 
-  /* Border Colors */
-  --color-border-soft: rgba(156, 139, 120, 0.22);
-  --color-border-medium: rgba(156, 139, 120, 0.38);
-  --color-border-strong: rgba(107, 90, 72, 0.28);
+  /* ===== BORDERS ===== */
+  --color-border-soft: rgba(28, 20, 16, 0.1);
 
-  /* Overlay / Focus */
-  --color-overlay: rgba(28, 20, 16, 0.58);
-  --color-focus-ring: rgba(201, 151, 58, 0.32);
+  /* ===== GRADIENT ===== */
+  --gradient-primary: linear-gradient(135deg, #c9973a 0%, #b85c38 100%);
 
-  /* Typography */
-  --font-family-base: "DM Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-family-heading: "Playfair Display", Georgia, serif;
-  --font-family-brand: "Courier New", monospace;
+  /* ===== TYPOGRAPHY ===== */
+  --font-family-base: "Inter", "Segoe UI", sans-serif;
 
-  --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-md: 1rem;
   --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
 
-  --font-size-heading-sm: 1.75rem;
-  --font-size-heading-md: 2.375rem;
-  --font-size-heading-lg: 3.5rem;
+  --font-size-heading-md: 2.25rem;
+  --font-size-heading-lg: 3rem;
 
   --font-weight-regular: 400;
-  --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  --line-height-tight: 1.08;
+  --line-height-body: 1.6;
   --line-height-heading: 1.2;
-  --line-height-body: 1.65;
 
-  /* Spacing */
-  --space-2xs: 0.25rem;
-  --space-xs: 0.5rem;
+  /* ===== SPACING ===== */
   --space-sm: 0.75rem;
   --space-md: 1rem;
   --space-lg: 1.5rem;
   --space-xl: 2rem;
   --space-2xl: 3rem;
   --space-3xl: 4rem;
-  --space-4xl: 6rem;
 
-  /* Radius */
-  --radius-sm: 0.5rem;
+  /* ===== RADIUS ===== */
   --radius-md: 0.875rem;
-  --radius-lg: 1rem;
-  --radius-xl: 1.25rem;
+  --radius-lg: 1.25rem;
   --radius-pill: 999px;
 
-  /* Shadows */
-  --shadow-soft: 0 10px 30px rgba(28, 20, 16, 0.06);
-  --shadow-medium: 0 16px 40px rgba(28, 20, 16, 0.10);
-  --shadow-button: 0 10px 24px rgba(201, 151, 58, 0.22);
-  --shadow-button-hover: 0 14px 30px rgba(184, 92, 56, 0.24);
-  --shadow-modal: 0 30px 80px rgba(28, 20, 16, 0.24);
-  --shadow-glass: 0 18px 40px rgba(28, 20, 16, 0.08);
+  /* ===== SHADOW ===== */
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
 
-  /* Layout */
-  --site-max-width: 1100px;
-  --site-max-width-wide: 1240px;
-  --navbar-height: 68px;
-
-  /* Transitions */
-  --transition-fast: 0.18s ease;
-  --transition-standard: 0.28s ease;
-  --transition-slow: 0.4s ease;
-
-  /* Z-Index */
-  --z-index-navbar: 1000;
-  --z-index-mobile-menu: 1050;
-  --z-index-modal: 2000;
-
-  /* Breakpoints */
-  --breakpoint-xs: 480px;
-  --breakpoint-sm: 640px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
+  /* ===== LAYOUT ===== */
+  --site-max-width: 1200px;
+  --navbar-height: 84px;
 }

@@ -44,22 +44,35 @@ export const trustStripContent = {
 };
 
 export const servicesContent = {
-  eyebrow: "Solutions",
-  heading: "Two focused paths for business growth.",
-  description:
-    "CodeHe{R} supports organizations through two core service areas. Workforce Solutions helps businesses strengthen hiring, retention, and long-term workforce strategy. Digital Solutions helps businesses build a professional online presence that supports credibility, visibility, and growth.",
   cards: [
     {
-      title: "Workforce Solutions",
-      price: "Consulting Services",
+      eyebrow: "Workforce Solutions",
+      icon: "👥",
+      title: "Build Stronger Teams.\nCreate Lasting Impact.",
       description:
-        "Consulting services designed to help organizations strengthen hiring, improve retention, and build workforce strategies that support long-term business goals.",
+        "Consulting services that help you hire smarter, retain talent, and build workforce strategies that actually work.",
+      items: [
+        "Workforce Assessment",
+        "Workforce Strategy",
+        "Implementation Support",
+        "Ongoing Advisory",
+      ],
+      cta: "Explore Workforce Solutions",
+      href: "#project-cta",
     },
     {
-      title: "Digital Solutions",
-      price: "Web Presence Services",
+      eyebrow: "Digital Solutions",
+      icon: "💻",
+      title: "Professional Presence.\nPowerful Possibilities.",
       description:
-        "Professional web solutions that help businesses present themselves clearly, build credibility, and create a digital presence that reflects the quality of their work.",
+        "Web solutions designed to represent your business, support your operations, and drive growth.",
+      items: [
+        "Website Development",
+        "Website Rebuilds",
+        "Hosting & Support",
+      ],
+      cta: "Explore Digital Solutions",
+      href: "#project-cta",
     },
   ],
 };

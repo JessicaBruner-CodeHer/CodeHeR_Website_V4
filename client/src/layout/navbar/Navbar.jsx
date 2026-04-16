@@ -1,7 +1,7 @@
 import { useState } from "react";
 import navLinks from "@/assets/constants/navLinks";
 import siteConfig from "@/assets/constants/siteConfig";
-import Button from "@/ui/button/Button";
+import Logo from "@/ui/logo/Logo";
 import "./navbar.css";
 
 const Navbar = ({ onQuoteClick }) => {
@@ -18,16 +18,8 @@ const Navbar = ({ onQuoteClick }) => {
   return (
     <header className="navbar">
       <div className="site-container navbar-inner">
-        
-        {/* Brand */}
-        <div className="navbar-brand">
-          <span className="brand-code">CODE</span>
-          <span className="brand-he">HE</span>
-          <span className="brand-r">{`{R}`}</span>
-          <sup className="brand-llc">LLC</sup>
-        </div>
+        <Logo className="navbar-brand" />
 
-        {/* Links */}
         <nav className={`navbar-links ${menuOpen ? "is-open" : ""}`}>
           {navLinks.map((link) => (
             <a
@@ -41,25 +33,26 @@ const Navbar = ({ onQuoteClick }) => {
           ))}
         </nav>
 
-        {/* Actions */}
         <div className="navbar-actions">
-          <Button
-            variant="quote"
-            label={siteConfig.navigation.ctaLabel}
+          <button
+            type="button"
+            className="button button--quote"
             onClick={onQuoteClick}
-          />
+          >
+            {siteConfig.navigation.ctaLabel}
+          </button>
 
           <button
             className="navbar-toggle"
             onClick={handleToggleMenu}
             aria-label="Toggle navigation"
+            type="button"
           >
             <span className="navbar-toggle-bar"></span>
             <span className="navbar-toggle-bar"></span>
             <span className="navbar-toggle-bar"></span>
           </button>
         </div>
-
       </div>
     </header>
   );
