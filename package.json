@@ -1,15 +1,15 @@
 {
   "name": "codeher-main",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "private": true,
   "description": "live-manage",
-  "homepage": "https://github.com/JessicaBruner-CodeHer/CodeHeR_Website_V3#readme",
+  "homepage": "https://github.com/JessicaBruner-CodeHer/CodeHeR_Website_V4#readme",
   "bugs": {
-    "url": "https://github.com/JessicaBruner-CodeHer/CodeHeR_Website_V3/issues"
+    "url": "https://github.com/JessicaBruner-CodeHer/CodeHeR_Website_V4/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JessicaBruner-CodeHer/CodeHeR_Website_V3.git"
+    "url": "git+https://github.com/JessicaBruner-CodeHer/CodeHeR_Website_V4.git"
   },
   "license": "ISC",
   "author": "",

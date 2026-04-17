@@ -9,8 +9,7 @@ module.exports = {
       env: {
         NODE_ENV: "production",
         PORT: 5000,
-        MONGODB_URI: "mongodb://127.0.0.1:27017/codeher",
-        RESEND_API_KEY: "re_hTKgQhNJ_Da5BmRHLxkBtPTKihXJiLXBp"
+        MONGODB_URI: "mongodb://127.0.0.1:27017/codeher"
       }
     }
   ]
