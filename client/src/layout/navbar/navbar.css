@@ -94,6 +94,20 @@
   background: var(--color-text-main);
   border-radius: 2px;
 }
+.navbar-cta,
+.navbar-cta:link,
+.navbar-cta:visited {
+  background-color: var(--color-primary);
+  color: #1c1410 !important;
+  border-color: var(--color-primary);
+}
+
+.navbar-cta:hover,
+.navbar-cta:active {
+  background-color: var(--color-secondary);
+  color: #ffffff !important;
+  border-color: var(--color-secondary);
+}
 
 @media (max-width: 768px) {
   .navbar-links {

@@ -33,7 +33,7 @@ const Navbar = ({ onQuoteClick }) => {
           ))}
         </nav>
 
-        <div className="navbar-actions">
+        {/* <div className="navbar-actions">
           <button
             type="button"
             className="button button--quote"
@@ -52,7 +52,7 @@ const Navbar = ({ onQuoteClick }) => {
             <span className="navbar-toggle-bar"></span>
             <span className="navbar-toggle-bar"></span>
           </button>
-        </div>
+        </div> */}
       </div>
     </header>
   );

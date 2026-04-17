@@ -46,11 +46,54 @@
   gap: 16px;
   margin-top: 36px;
   flex-wrap: wrap;
+
+  padding: 18px 20px;
+
+  /* Brand background */
+  background: #FAF7F2;
+
+  /* Soft structured border */
+  border: 1px solid #EDE5D8;
+
+  /* Brand accent line */
+  border-top: 3px solid #C9973A;
+
+  border-radius: 14px;
+
+  /* Depth using inkwell */
+  box-shadow:
+    0 12px 30px rgba(28, 20, 16, 0.08),
+    0 3px 8px rgba(28, 20, 16, 0.04);
+
+  width: fit-content;
+
+  transition: all 0.2s ease;
+}
+.hero-actions:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 18px 40px rgba(28, 20, 16, 0.12),
+    0 6px 14px rgba(28, 20, 16, 0.06);
+}
+.hero-actions::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  pointer-events: none;
+  box-shadow: inset 0 -2px 0 #C9973A;
+  opacity: 0.4;
 }
 
 .hero-actions .button {
   min-width: 190px;
+  margin-left: 60px;
+
+
+  
 }
+
 
 .hero-brand-visual {
   display: flex;
@@ -65,6 +108,7 @@
   height: auto;
   object-fit: contain;
 }
+
 
 @media (max-width: 900px) {
   .hero-section {
